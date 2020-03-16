@@ -1,0 +1,8 @@
+2020-03-15
+5:00pm - 9:13pm
+- reading MCP3008 spec sheet https://cdn-shop.adafruit.com/datasheets/MCP3008.pdf
+- research into how to write SPI code
+	- whether digitalWrite() is fast enough
+	- sidetracked by people testing how fast they can make an Arduino output a square wave
+- writing, debugging, testing Arduino code
+

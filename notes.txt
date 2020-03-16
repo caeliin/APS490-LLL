@@ -1,0 +1,23 @@
+- SS active low
+- sampling is rising edge of clock
+- output (bit changes) happens on falling edge of clock
+- return 10 bit value
+	- Arduino Uno int is 16 bits
+- minimum clock speed for reliable reading - 10kHz 
+	- T = 0.1ms = 100 microseconds
+	- does not have to be constant
+	- max digitalWrite() frequency
+		- 148kHz on non-PWM pin
+		- 106.8kHz on PWM pin
+	- use approximately 20kHz for SCLK
+		- 50 microseconds per cycle
+		- 25 microseconds per half cycle
+		- delayMicroseconds(25)
+		- will be slowed to under 20kHz because of other instructions, but should still be above 10kHz
+	
+
+start bit - Din high
+- can have low before for as many clocks as necessary
+
+to sample C0 in single mode
+control bits: 1000
